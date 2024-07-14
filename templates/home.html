@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to SmartData</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- FontAwesome -->
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+        }
+
+        .header {
+            padding: 40px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        .main-content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-custom {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Alert for the Alpha version -->
+<div class="alert alert-warning text-center" role="alert">
+    <i class="fas fa-exclamation-triangle"></i> <strong>Version Alpha!</strong> Please exercise caution when using. This version may contain security vulnerabilities. Do not use confidential data
+</div>
+
+<div class="header">
+    <h1>Welcome to SmartData</h1>
+    <p>Intelligent & Interactive Data Analysis</p>
+</div>
+
+<div class="main-content">
+    <p>
+        Empower your data-driven decisions with SmartData. Here, we leverage the capabilities of Dash to provide advanced and interactive data analysis from CSV datasets. Join us to dive deep into your data.
+    </p>
+
+    <a href="{{ url_for('auth.login') }}" class="btn-custom">Login to Get Started</a>
+
+    <section style="margin-top: 40px;">
+        <img src="{{ url_for('static', filename='img.gif') }}" alt="Interactive Data Analysis with Dash" style="width:100%; max-width:700px; display:block; margin:auto;">
+        <h2 class="mt-4">Driven by Dash & Plotly</h2>
+        <p>Dash and Plotly, the leaders in data visualization, power our platform to offer you top-notch interactive analysis.</p>
+    </section>
+</div>
+
+<!-- Optional: Include Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
